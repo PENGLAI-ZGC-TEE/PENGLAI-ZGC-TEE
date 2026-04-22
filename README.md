@@ -1,20 +1,30 @@
 # NEMU-TEE
+Enable Penglai-TEE to run on NEMU.
 
-make Penglai-TEE work on NEMU.
+## Usage
 
-# Usage
+Update the Docker environment (recommended):
 
-* Firstly, initialize your repo with:
+```bash
+# Build image
+make docker-build
+# Run container
+make docker-run
+```
+
+Operations inside the container are the same:
+
+First, initialize your repository by running:
 
 ```bash
 make init
 ```
 
-* Secondly, use makefile to automatically get work down.
+Then, use the Makefile to complete tasks automatically.
 
-```
-# compile
+```bash
+# Compile
 make -j8
-# run
+# Run
 make run
 ```
